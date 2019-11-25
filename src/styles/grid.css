@@ -1,0 +1,176 @@
+/* 12 column grid system */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  @media (max-width: 575px) {
+    grid-column-gap: 12px;
+  }
+
+  @media (min-width: 576px) {
+    grid-column-gap: 24px;
+  }
+}
+
+.grid__item {
+  /* Default layout when [data-grid-small] is not declared */
+  &:not([data-grid-small]) {
+    grid-column-end: span 12;
+  }
+  
+  /* Data attributes that control the amount of columns an item will span within the 12 column layout for all viewports */
+  &[data-grid-small="1"] {
+    grid-column-end: span 1;
+  }
+  &[data-grid-small="2"] {
+    grid-column-end: span 2;
+  }
+  &[data-grid-small="3"] {
+    grid-column-end: span 3;
+  }
+  &[data-grid-small="4"] {
+    grid-column-end: span 4;
+  }
+  &[data-grid-small="5"] {
+    grid-column-end: span 5;
+  }
+  &[data-grid-small="6"] {
+    grid-column-end: span 6;
+  }
+  &[data-grid-small="7"] {
+    grid-column-end: span 7;
+  }
+  &[data-grid-small="8"] {
+    grid-column-end: span 8;
+  }
+  &[data-grid-small="9"] {
+    grid-column-end: span 9;
+  }
+  &[data-grid-small="10"] {
+    grid-column-end: span 10;
+  }
+  &[data-grid-small="11"] {
+    grid-column-end: span 11;
+  }
+  &[data-grid-small="12"] {
+    grid-column-end: span 12;
+  }
+
+  /* Data attributes that control the amount of columns an item will span within the 12 column layout for "medium" viewports and up */
+	@media (min-width: 576px) {
+    &[data-grid-medium="1"] {
+      grid-column-end: span 1;
+    }
+    &[data-grid-medium="2"] {
+      grid-column-end: span 2;
+    }
+    &[data-grid-medium="3"] {
+      grid-column-end: span 3;
+    }
+    &[data-grid-medium="4"] {
+      grid-column-end: span 4;
+    }
+    &[data-grid-medium="5"] {
+      grid-column-end: span 5;
+    }
+    &[data-grid-medium="6"] {
+      grid-column-end: span 6;
+    }
+    &[data-grid-medium="7"] {
+      grid-column-end: span 7;
+    }
+    &[data-grid-medium="8"] {
+      grid-column-end: span 8;
+    }
+    &[data-grid-medium="9"] {
+      grid-column-end: span 9;
+    }
+    &[data-grid-medium="10"] {
+      grid-column-end: span 10;
+    }
+    &[data-grid-medium="11"] {
+      grid-column-end: span 11;
+    }
+    &[data-grid-medium="12"] {
+      grid-column-end: span 12;
+    }
+  }
+
+  /* Data attributes that control the amount of columns an item will span within the 12 column layout for "large" viewports and up */
+  @media (min-width: 1024px) {
+    &[data-grid-large="1"] {
+      grid-column-end: span 1;
+    }
+    &[data-grid-large="2"] {
+      grid-column-end: span 2;
+    }
+    &[data-grid-large="3"] {
+      grid-column-end: span 3;
+    }
+    &[data-grid-large="4"] {
+      grid-column-end: span 4;
+    }
+    &[data-grid-large="5"] {
+      grid-column-end: span 5;
+    }
+    &[data-grid-large="6"] {
+      grid-column-end: span 6;
+    }
+    &[data-grid-large="7"] {
+      grid-column-end: 7;
+    }
+    &[data-grid-large="8"] {
+      grid-column-end: span 8;
+    }
+    &[data-grid-large="9"] {
+      grid-column-end: span 9;
+    }
+    &[data-grid-large="10"] {
+      grid-column-end: span 10;
+    }
+    &[data-grid-large="11"] {
+      grid-column-end: span 11;
+    }
+    &[data-grid-large="12"] {
+      grid-column-end: span 12;
+    }
+  }
+
+  /* Grid item start values that position elements on the 12 column grid, this is just like setting an offset for grid items */
+  &[data-grid-item-start="1"] {
+    grid-column-start: 1;
+  }
+  &[data-grid-item-start="2"] {
+    grid-column-start: 2;
+  }
+  &[data-grid-item-start="3"] {
+    grid-column-start: 3;
+  }
+  &[data-grid-item-start="4"] {
+    grid-column-start: 4;
+  }
+  &[data-grid-item-start="5"] {
+    grid-column-start: 5;
+  }
+  &[data-grid-item-start="6"] {
+    grid-column-start: 6;
+  }
+  &[data-grid-item-start="7"] {
+    grid-column-start: 7;
+  }
+  &[data-grid-item-start="8"] {
+    grid-column-start: 8;
+  }
+  &[data-grid-item-start="9"] {
+    grid-column-start: 9;
+  }
+  &[data-grid-item-start="10"] {
+    grid-column-start: 10;
+  }
+  &[data-grid-item-start="11"] {
+    grid-column-start: 11;
+  }
+  &[data-grid-item-start="12"] {
+    grid-column-start: 12;
+  }
+}
