@@ -1,0 +1,11 @@
+.footer {
+  padding: 1em 16px 2em 16px;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.footer__heading {
+  margin-right: 1em;
+}

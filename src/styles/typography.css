@@ -27,7 +27,6 @@
 }
 
 .t-section-heading {
-  font-family: var(--font-mukta);
   font-weight: var(--weight-extra-bold);
   letter-spacing: .0625rem;
   line-height: 1.2;

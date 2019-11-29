@@ -47,6 +47,7 @@ body {
   font-family: var(--font-noto-sans);
   line-height: 1;
   background-color: var(--color-brand-1);
+  color: var(--color-brand-2);
 }
 
 blockquote, q {
@@ -91,7 +92,8 @@ button {
   height: 100vh;
   grid-template-areas:
   "hero"
-  "main";
-  grid-template-rows: auto 1fr;
-  grid-template-columns:1fr;
+  "main"
+  "footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
 }
