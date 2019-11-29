@@ -1,15 +1,15 @@
 :root {
   /* BASE COLORS */
-  --color-black: hsl()#000;
-  --color-white: hsl()#fff;
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(360, 100%, 100%);
 
   /* BRAND COLORS */
-  --color-brand-1: hsl(130, 45%, 90%);
-  --color-brand-2: hsl(166, 99%, 33%);
-  --color-brand-3: hsl(165, 41%, 23%);
-  --color-brand-4: hsl(169, 44%, 15%);
-  --color-brand-5: hsl(171, 59%, 11%);
-  --color-brand-6: hsl(182, 73%, 7%);
+  --color-brand-1: hsl(0, 0%, 96%);
+  --color-brand-2: hsl(203, 61%, 22%);
+  --color-brand-3: hsl(203, 61%, 20%);
+  --color-brand-4: hsl(203, 61%, 15%);
+  --color-brand-5: hsl(203, 61%, 11%);
+  --color-brand-6: hsl(203, 61%, 8%);
 
   /* GRAYS */
   --color-gray-1: hsl(0, 0%, 98%);

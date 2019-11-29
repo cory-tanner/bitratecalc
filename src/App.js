@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.css';
+import Hero from './components/hero';
+import Main from './components/main';
+import Footer from './components/footer';
 
 function App() {
   return (
     <div className="App">
-      <h1 className="t-display">Hello World</h1>
+      <Hero />
+      <Main />
+      <Footer />
     </div>
   );
 }

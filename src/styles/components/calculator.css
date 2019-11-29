@@ -1,0 +1,8 @@
+.calculator {
+  padding: 16px;
+  grid-area: calculator;
+  border: 1px solid var(--color-brand-3);
+}
+.calculator__heading {
+  margin-bottom: 1em;
+}

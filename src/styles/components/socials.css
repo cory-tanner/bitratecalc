@@ -1,0 +1,19 @@
+.socials {
+  display: flex;
+}
+
+.socials__link {
+  padding: 8px;
+  fill: var(--color-brand-4);
+
+  &:hover,
+  &:focus {
+    fill: var(--color-link);
+  }
+}
+
+.socials__social {
+  width: 24px;
+  height: 24px;
+  fill: inherit;
+}
