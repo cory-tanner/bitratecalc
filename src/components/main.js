@@ -1,14 +1,16 @@
 import React from 'react';
-import '../styles/components/main.css';
 import Intro from './modules/intro';
-import Calculator from './modules/calculator'
+import Calculator from './modules/calculator';
 
 
 // Stateless React Component
 const Main = () => (
   <main className="main">
     <Intro />
-    <Calculator />
+    <section className="section">
+      <h3 className="t-section-heading section__heading">Enter Your Settings</h3>
+      <Calculator />
+    </section>
   </main>
 )
 
