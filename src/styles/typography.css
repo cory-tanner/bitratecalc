@@ -36,7 +36,20 @@
   }
   @media (min-width: 800px) {
     font-size: var(--type-scale-30);
-  } 
+  }
+}
+
+.t-body-heading {
+  font-weight: var(--weight-bold);
+  letter-spacing: .0625rem;
+  line-height: 1.2;
+
+  @media (max-width: 799px) {
+    font-size: var(--type-scale-18);
+  }
+  @media (min-width: 800px) {
+    font-size: var(--type-scale-24);
+  }
 }
 
 .t-body {
