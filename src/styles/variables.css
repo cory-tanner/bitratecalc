@@ -11,14 +11,18 @@
   --color-brand-5: hsl(203, 61%, 11%);
   --color-brand-6: hsl(203, 61%, 8%);
 
-  /* GRAYS */
+  /* GRAY COLORS*/
   --color-gray-1: hsl(0, 0%, 98%);
   --color-gray-2: hsl(0, 15%, 90%);
   --color-gray-3: hsl(0, 0%, 60%);
   --color-gray-4: hsl(0, 0%, 30%);
   --color-gray-5: hsl(0, 0%, 11%);
 
-  /* MISC */
+  /* UTIL COLORS */
+  --color-sucess: hsl(145, 71%, 52%);
+  --color-negative: hsl(4, 81%, 52%);
+
+  /* MISC COLORS */
   --color-link: hsl(195, 100%, 33%);
 
   /* FONT FAMILIES */

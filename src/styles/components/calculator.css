@@ -3,6 +3,18 @@
   border-top: 1px solid var(--color-brand-3);
   grid-gap: 16px;
 }
+
+.calculator__result {
+  margin-top: 2em;
+
+  &.is-positive {
+    color: var(--color-sucess);
+  }
+  &.is-negative {
+    color: var(--color-negative);
+  }
+}
+
 .calculator__result__heading {
   margin-bottom: .5em;
 }
