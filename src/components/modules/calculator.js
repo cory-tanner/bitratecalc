@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 function bitrateCalc(userUpload, userStream, userFPS, userResolutionW, userResolutionH) {
   const PPS = ((userResolutionW * userResolutionH) * userFPS);
-  const fractionHigh = .1 * PPS;
-  const fractionLow = .06 * PPS;
-  const recommendBitrate = (userUpload * 10) / userStream;
+  const fractionHigh = .15 * PPS;
+  const fractionLow = .09 * PPS;
+  const recommendBitrate = ((userUpload * 10) * (userStream * .01) * .01);
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  return(numberWithCommas('Low ' + Math.round((fractionLow / 1000) / recommendBitrate) + ' High ' + Math.round((fractionHigh / 1000) / recommendBitrate)))
+  return(numberWithCommas('Low ' + Math.round((fractionLow / 1000) * recommendBitrate) + ' High ' + Math.round((fractionHigh / 1000) * recommendBitrate)))
 
 }
 
