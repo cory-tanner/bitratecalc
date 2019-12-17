@@ -6,7 +6,11 @@ function bitrateCalc(userUpload, userStream, userFPS, userResolutionW, userResol
   const fractionLow = .06 * PPS;
   const recommendBitrate = (userUpload * 10) / userStream;
 
-  return('Low ' + ((fractionLow / 1000) / recommendBitrate) + ' High ' + ((fractionHigh / 1000) / recommendBitrate))
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  return(numberWithCommas('Low ' + Math.round((fractionLow / 1000) / recommendBitrate) + ' High ' + Math.round((fractionHigh / 1000) / recommendBitrate)))
 
 }
 
@@ -34,8 +38,7 @@ class Calculator extends Component {
   render() {
     return (
       <div className="calculator grid">
-        <h4 className="t-body-heading grid__item calculator__heading">Enter Your Settings</h4>
-        <div className="grid__item" data-grid-medium="6">
+        <div className="grid__item" data-grid-medium="8">
           <label className="calculator__label" htmlFor="userUpload">Upload Speed (Mbps)</label>
           <input 
             name="userUpload"
@@ -46,7 +49,7 @@ class Calculator extends Component {
             type="number" />
         </div>
 
-        <div className="grid__item" data-grid-medium="6">
+        <div className="grid__item" data-grid-medium="8">
           <label className="calculator__label" htmlFor="userStream">Percent of Upload for Stream</label>
           <input
             name="userStream"
@@ -57,7 +60,7 @@ class Calculator extends Component {
             id="userStream" />
         </div>
 
-        <div className="grid__item" data-grid-medium="6">
+        <div className="grid__item" data-grid-medium="8">
           <label className="calculator__label" htmlFor="userResolutionW">Output Stream Resolution Width</label>
           <input
             name="userResolutionW"
@@ -68,7 +71,7 @@ class Calculator extends Component {
             id="userResolutionW" />
         </div>
 
-        <div className="grid__item" data-grid-medium="6">
+        <div className="grid__item" data-grid-medium="8">
           <label className="calculator__label" htmlFor="userResolutionH">Output Stream Resolution Height</label>
           <input
             name="userResolutionH"
@@ -79,7 +82,7 @@ class Calculator extends Component {
             id="userResolutionH" />
         </div>
 
-        <div className="grid__item" data-grid-medium="6">
+        <div className="grid__item" data-grid-medium="8">
           <label className="calculator__label" htmlFor="userFPS">Output Frames Per Second (FPS)</label>
           <input
             name="userFPS"
