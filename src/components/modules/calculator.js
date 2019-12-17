@@ -38,7 +38,7 @@ class Calculator extends Component {
   render() {
     return (
       <div className="calculator grid">
-        <div className="grid__item" data-grid-medium="8">
+        <div className="grid__item">
           <label className="calculator__label" htmlFor="userUpload">Upload Speed (Mbps)</label>
           <input 
             name="userUpload"
@@ -49,7 +49,7 @@ class Calculator extends Component {
             type="number" />
         </div>
 
-        <div className="grid__item" data-grid-medium="8">
+        <div className="grid__item">
           <label className="calculator__label" htmlFor="userStream">Percent of Upload for Stream</label>
           <input
             name="userStream"
@@ -60,7 +60,7 @@ class Calculator extends Component {
             id="userStream" />
         </div>
 
-        <div className="grid__item" data-grid-medium="8">
+        <div className="grid__item">
           <label className="calculator__label" htmlFor="userResolutionW">Output Stream Resolution Width</label>
           <input
             name="userResolutionW"
@@ -71,7 +71,7 @@ class Calculator extends Component {
             id="userResolutionW" />
         </div>
 
-        <div className="grid__item" data-grid-medium="8">
+        <div className="grid__item">
           <label className="calculator__label" htmlFor="userResolutionH">Output Stream Resolution Height</label>
           <input
             name="userResolutionH"

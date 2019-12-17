@@ -36,7 +36,7 @@
   }
   @media (min-width: 800px) {
     font-size: var(--type-scale-30);
-  } 
+  }
 }
 
 .t-body-heading {
@@ -49,7 +49,7 @@
   }
   @media (min-width: 800px) {
     font-size: var(--type-scale-24);
-  } 
+  }
 }
 
 .t-body {
