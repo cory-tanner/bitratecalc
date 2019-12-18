@@ -2,8 +2,6 @@ import React from 'react';
 import Intro from './modules/intro';
 import Calculator from './modules/calculator';
 
-
-// Stateless React Component
 const Main = () => (
   <main className="main">
     <Intro />

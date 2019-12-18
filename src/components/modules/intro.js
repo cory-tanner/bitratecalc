@@ -1,7 +1,4 @@
 import React from 'react';
-import '../../styles/components/intro.css';
-import '../../styles/components/section.css'
-
 
 // Stateless React Component
 const Intro = () => (
