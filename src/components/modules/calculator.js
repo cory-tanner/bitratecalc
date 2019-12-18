@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
 
-function bitrateCalc(userUpload, userStream, userFPS, userResolutionW, userResolutionH) {
+function bitrateCalcLow(userFPS, userResolutionW, userResolutionH) {
   const PPS = ((userResolutionW * userResolutionH) * userFPS);
-  const fractionHigh = .15 * PPS;
-  const fractionLow = .09 * PPS;
-  const recommendBitrate = ((userUpload * 10) * (userStream * .01) * .01);
+  const fractionLow = Math.round((.079 * PPS) / 1000);
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  return(numberWithCommas('Low ' + Math.round((fractionLow / 1000) * recommendBitrate) + ' High ' + Math.round((fractionHigh / 1000) * recommendBitrate)))
+  return(numberWithCommas(fractionLow))
+}
 
+function bitrateCalcHigh(userFPS, userResolutionW, userResolutionH) {
+  const PPS = ((userResolutionW * userResolutionH) * userFPS);
+  const fractionHigh = Math.round((.15 * PPS) / 1000);
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  return(numberWithCommas(fractionHigh))
+}
+
+function bitrateAcceptance(userUpload, userStream) {
+  const recommendBitrate = (userUpload * 1000) * (userStream * .01);
+
+  return(recommendBitrate)
 }
 
 class Calculator extends Component {
@@ -20,8 +34,8 @@ class Calculator extends Component {
     this.state = {
       userUpload: 8,
       userStream: 60,
-      userResolutionH: 1080,
-      userResolutionW: 1920,
+      userResolutionW: 1280,
+      userResolutionH: 720,
       userFPS: 60,
       userBitrate: 3600
     };
@@ -55,6 +69,7 @@ class Calculator extends Component {
             name="userStream"
             className="calculator__input"
             type="number"
+            max="100"
             value={this.state.userStream}
             onChange={this.handleChange}
             id="userStream" />
@@ -95,7 +110,18 @@ class Calculator extends Component {
 
         <div className="calculator__result grid__item">
           <h4 className="t-body-heading calculator__result__heading">Recommended Bitrate</h4>
-          <p className="t-body calculator__result__output">{bitrateCalc(this.state.userUpload, this.state.userStream, this.state.userFPS, this.state.userResolutionH, this.state.userResolutionW)}</p>
+          <p className="t-body calculator__result__output">
+            Low {bitrateCalcLow(this.state.userFPS, this.state.userResolutionW, this.state.userResolutionH)}
+          </p>
+          <p className="t-body calculator__result__output">
+            High {bitrateCalcHigh(this.state.userFPS, this.state.userResolutionW, this.state.userResolutionH)}
+          </p>
+        </div>
+        <div className="calculator__result grid__item">
+          <h4 className="t-body-heading calculator__result__heading">Streams Max Bitrate</h4>
+          <p className="t-body calculator__result__output">
+            {bitrateAcceptance(this.state.userUpload, this.state.userStream)}
+          </p>
         </div>
       </div>
     );
