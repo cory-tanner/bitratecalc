@@ -1,26 +1,28 @@
 :root {
   /* BASE COLORS */
-  --color-black: hsl(0, 0%, 0%);
-  --color-white: hsl(360, 100%, 100%);
+  --color-black: hsl(0, 0%, 20%);
+  --color-white: hsl(0, 0%, 98%, 1);
+  --color-white-pure: hsl(0, 0%, 100%);
 
   /* BRAND COLORS */
-  --color-brand-1: hsl(0, 0%, 96%);
-  --color-brand-2: hsl(203, 61%, 22%);
-  --color-brand-3: hsl(203, 61%, 20%);
-  --color-brand-4: hsl(203, 61%, 15%);
+  --color-brand-blue-light: hsl(214, 35%, 81%);
+  --color-brand-blue: hsl(214, 67%, 52%);
+  --color-brand-blue-dark: hsl(214, 61%, 22%);
+  --color-brand-green: hsl(146, 40%, 65%);
+  --color-brand-orange: hsl(33, 80%, 95%);
   --color-brand-5: hsl(203, 61%, 11%);
   --color-brand-6: hsl(203, 61%, 8%);
 
   /* GRAY COLORS*/
-  --color-gray-1: hsl(0, 0%, 98%);
-  --color-gray-2: hsl(0, 15%, 90%);
+  --color-gray-1: hsl(0, 0%, 90%);
+  --color-gray-2: hsl(0, 0%, 80%, 1);
   --color-gray-3: hsl(0, 0%, 60%);
   --color-gray-4: hsl(0, 0%, 30%);
   --color-gray-5: hsl(0, 0%, 11%);
 
   /* UTIL COLORS */
-  --color-sucess: hsl(145, 71%, 52%);
-  --color-negative: hsl(4, 81%, 52%);
+  --color-sucess: hsl(124, 47%, 75%);
+  --color-negative: hsl(355, 67%, 95%);
 
   /* MISC COLORS */
   --color-link: hsl(195, 100%, 33%);
@@ -40,5 +42,5 @@
   --dy-button-border-radius: 4px;
 
   /* TRANSITION */
-  --global-transition: .3s ease;
+  --global-transition: .1s ease-in;
 }

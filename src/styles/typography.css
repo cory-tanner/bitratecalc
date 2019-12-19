@@ -82,3 +82,13 @@
     color: var(--color-link);
   }
 }
+
+.t-label {
+  font-size: var(--type-scale-18);
+  line-height: 1.2;
+}
+
+.t-input {
+  font-size: var(--type-scale-18);
+  line-height: 1.2;
+}

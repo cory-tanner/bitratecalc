@@ -4,7 +4,7 @@
 
 .socials__link {
   padding: 8px;
-  fill: var(--color-brand-4);
+  fill: var(--color-black);
 
   &:hover,
   &:focus {
@@ -16,4 +16,5 @@
   width: 24px;
   height: 24px;
   fill: inherit;
+  transition: fill var(--global-transition);
 }
