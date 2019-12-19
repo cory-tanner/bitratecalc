@@ -2,19 +2,11 @@
   padding: 16px 16px 42px 16px;
   grid-area: main;
   display: grid;
+  grid-template-areas:
+  "intro"
+  "calculator";
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-gap: 1em;
-  background-color: var(--color-brand-1);
-
-  @media (max-width: 799px) {
-    grid-template-areas:
-    "intro"
-    "calculator";
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 800px) {
-    grid-template-areas:
-    "intro calculator";
-    grid-template-columns: 1fr 1fr;
-  } 
+  background-color: var(--color-white);
 }

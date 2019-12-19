@@ -46,8 +46,8 @@ footer, header, hgroup, menu, nav, section {
 body {
   font-family: var(--font-noto-sans);
   line-height: 1;
-  background-color: var(--color-brand-1);
-  color: var(--color-brand-2);
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 blockquote, q {
