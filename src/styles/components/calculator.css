@@ -25,10 +25,10 @@
 .calculator__input {
   padding: 8px 6px;
   max-width: 4em;
-  background-color: var(--color-white-pure);
-  border: 1px solid var(--color-gray-2);
+  background-color: transparent;
+  border: 1px solid var(--color-white-soft);
   border-radius: 3px;
-  color: var(--color-brand-4);
+  color: var(--color-white-soft);
   text-align: center;
   transition: all var(--global-transition);
 
@@ -48,8 +48,9 @@
 
   &:hover,
   &:focus {
-    background-color: var(--color-brand-blue-light);
-    border-color: var(--color-black);
+    background-color: var(--color-black-soft);
+    border-color: var(--color-brand-blue-light);
+    color: var(--color-brand-white);
     outline: none;
   }
 }

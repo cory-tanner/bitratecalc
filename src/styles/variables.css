@@ -1,7 +1,9 @@
 :root {
   /* BASE COLORS */
-  --color-black: hsl(0, 0%, 20%);
-  --color-white: hsl(0, 0%, 98%, 1);
+  --color-black: hsl(223, 9%, 15%);
+  --color-black-soft: hsl(223, 9%, 12%);
+  --color-white: hsl(0, 0%, 88%, 1);
+  --color-white-soft: hsl(0, 0%, 50%, 1);
   --color-white-pure: hsl(0, 0%, 100%);
 
   /* BRAND COLORS */
@@ -25,7 +27,7 @@
   --color-negative: hsl(355, 67%, 95%);
 
   /* MISC COLORS */
-  --color-link: hsl(195, 100%, 33%);
+  --color-link: hsl(214, 67%, 52%);
 
   /* FONT FAMILIES */
   --font-mukta: 'Mukta', sans-serif;
