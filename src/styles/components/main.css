@@ -8,5 +8,4 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-gap: 1em;
-  background-color: var(--color-white);
 }

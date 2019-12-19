@@ -4,7 +4,7 @@
 
 .socials__link {
   padding: 8px;
-  fill: var(--color-black);
+  fill: var(--color-white);
 
   &:hover,
   &:focus {

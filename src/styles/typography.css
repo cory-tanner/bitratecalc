@@ -74,7 +74,8 @@
 }
 
 .t-link {
-  color: var(--color-gray-4);
+  font-size: var(--type-scale-18);
+  color: var(--color-brand-blue-light);
   text-decoration: none;
 
   &:hover,

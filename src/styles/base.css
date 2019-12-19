@@ -46,8 +46,8 @@ footer, header, hgroup, menu, nav, section {
 body {
   font-family: var(--font-noto-sans);
   line-height: 1;
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 blockquote, q {
@@ -88,6 +88,9 @@ button {
 }
 
 .App {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
   display: grid;
   height: 100vh;
   grid-template-areas:
