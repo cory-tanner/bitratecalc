@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Hero from './components/hero';
+import Header from './components/header';
 import Main from './components/main';
 import Footer from './components/footer';
 import ReactGA from 'react-ga';
@@ -14,7 +14,7 @@ function App() {
   initializeAnalytics()
   return (
     <div className="App">
-      <Hero />
+      <Header />
       <Main />
       <Footer />
     </div>

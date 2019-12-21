@@ -21,11 +21,6 @@
   letter-spacing: .0625rem;
 }
 
-.t-sub-display {
-  font-size: var(--type-scale-24);
-  letter-spacing: .0625rem;
-}
-
 .t-section-heading {
   font-weight: var(--weight-extra-bold);
   letter-spacing: .0625rem;
@@ -45,7 +40,7 @@
   line-height: 1.2;
 
   @media (max-width: 799px) {
-    font-size: var(--type-scale-18);
+    font-size: var(--type-scale-20);
   }
   @media (min-width: 800px) {
     font-size: var(--type-scale-24);
@@ -56,31 +51,23 @@
   font-size: var(--type-scale-18);
   letter-spacing: .0625rem;
   line-height: 1.6;
-
-  + .t-body {
-    margin-top: .444em;
-  }
 }
 
-.t-list-copy {
+.t-bitrate {
   font-family: var(--font-mukta);
   font-size: var(--type-scale-20);
   font-weight: var(--weight-extra-bold);
   line-height: 1.2;
 }
 
-.t-list-date {
-  font-size: var(--type-scale-16);
-}
-
 .t-link {
-  font-size: var(--type-scale-18);
-  color: var(--color-brand-blue-light);
+  color: var(--color-brand-green);
   text-decoration: none;
 
   &:hover,
   &:focus {
     color: var(--color-link);
+    outline: none;
   }
 }
 
@@ -92,4 +79,10 @@
 .t-input {
   font-size: var(--type-scale-18);
   line-height: 1.2;
+}
+
+.t-footer {
+  font-size: var(--type-scale-14);
+  letter-spacing: .0625rem;
+  line-height: 1.4;
 }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function bitrateCalcLow(userFPS, userResolutionW, userResolutionH) {
   const PPS = ((userResolutionW * userResolutionH) * userFPS);
   const fractionLow = Math.round((.079 * PPS) / 1000);
-
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
 
   return(numberWithCommas(fractionLow))
 }
@@ -15,17 +15,13 @@ function bitrateCalcHigh(userFPS, userResolutionW, userResolutionH) {
   const PPS = ((userResolutionW * userResolutionH) * userFPS);
   const fractionHigh = Math.round((.15 * PPS) / 1000);
 
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
   return(numberWithCommas(fractionHigh))
 }
 
 function bitrateAcceptance(userUpload, userStream) {
   const recommendBitrate = (userUpload * 1000) * (userStream * .01);
 
-  return(recommendBitrate)
+  return(numberWithCommas(recommendBitrate))
 }
 
 class Calculator extends Component {
@@ -37,7 +33,7 @@ class Calculator extends Component {
       userResolutionW: 1280,
       userResolutionH: 720,
       userFPS: 60,
-      userBitrate: 3600
+      userBitrate: 3600,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -50,76 +46,82 @@ class Calculator extends Component {
   }
 
   render() {
+    //const valueFilled = handleValue(this.state.value);
     return (
       <div className="calculator grid">
         <div className="grid__item" data-grid-medium="6">
-          <label className="t-label calculator__label" htmlFor="userUpload">Upload Speed (Mbps):</label>
+          <label className="t-label calculator__label" htmlFor="userUpload">Your Upload Speed (Mbps):</label>
           <input 
             name="userUpload"
-            value={this.state.userUpload}
-            onChange={this.handleChange}
-            className="t-input calculator__input"
             id="userUpload"
-            type="number" />
+            className="t-input calculator__input"
+            type="number"
+            onChange={this.handleChange}
+            placeholder={this.state.userUpload}
+            data-has-value={this.state.userUpload ? true : false} />
         </div>
 
         <div className="grid__item" data-grid-medium="6">
           <label className="t-label calculator__label" htmlFor="userStream">Percent of Upload for Stream:</label>
           <input
             name="userStream"
+            id="userStream"
             className="t-input calculator__input"
             type="number"
             max="100"
             value={this.state.userStream}
             onChange={this.handleChange}
-            id="userStream" />
+            data-has-value={this.state.userStream ? true : false} />
         </div>
 
         <div className="grid__item" data-grid-medium="6">
           <label className="t-label calculator__label" htmlFor="userResolutionW">Output Stream Resolution Width:</label>
           <input
             name="userResolutionW"
+            id="userResolutionW" 
             className="t-input calculator__input"
             type="number"
-            value={this.state.userResolutionW}
             onChange={this.handleChange}
-            id="userResolutionW" />
+            placeholder={this.state.userResolutionW}
+            data-has-value={this.state.userResolutionW ? true : false} />
         </div>
 
         <div className="grid__item" data-grid-medium="6">
           <label className="t-label calculator__label" htmlFor="userResolutionH">Output Stream Resolution Height:</label>
           <input
             name="userResolutionH"
+            id="userResolutionH" 
             className="t-input calculator__input"
             type="number"
-            value={this.state.userResolutionH}
             onChange={this.handleChange}
-            id="userResolutionH" />
+            placeholder={this.state.userResolutionH}
+            data-has-value={this.state.userResolutionH ? true : false} />
         </div>
 
         <div className="grid__item" data-grid-medium="8">
           <label className="t-label calculator__label" htmlFor="userFPS">Output Frames Per Second (FPS):</label>
           <input
             name="userFPS"
+            id="userFPS" 
             className="t-input calculator__input"
             type="number"
-            value={this.state.userFPS}
             onChange={this.handleChange}
-            id="userFPS" />
+            placeholder={this.state.userFPS}
+            data-has-value={this.state.userFPS ? true : false} />
         </div>
 
         <div className="calculator__result grid__item"  data-grid-medium="6">
           <h4 className="t-body-heading calculator__result__heading">Recommended Bitrate</h4>
-          <p className="t-body calculator__result__output">
+          <p id="resultLow" className="t-bitrate calculator__result__output">
             Low {bitrateCalcLow(this.state.userFPS, this.state.userResolutionW, this.state.userResolutionH)}
           </p>
-          <p className="t-body calculator__result__output">
+          <p id="resultHigh" className="t-bitrate calculator__result__output">
             High {bitrateCalcHigh(this.state.userFPS, this.state.userResolutionW, this.state.userResolutionH)}
           </p>
         </div>
         <div className="calculator__result grid__item" data-grid-medium="6">
           <h4 className="t-body-heading calculator__result__heading">Streams Max Bitrate</h4>
-          <p className="t-body calculator__result__output">
+          <p className="t-bitrate calculator__result__output">
             {bitrateAcceptance(this.state.userUpload, this.state.userStream)}
           </p>
         </div>

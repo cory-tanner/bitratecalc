@@ -1,11 +1,11 @@
 .main {
-  padding: 16px 16px 42px 16px;
+  padding: 16px 16px 4em 16px;
   grid-area: main;
   display: grid;
   grid-template-areas:
   "intro"
   "calculator";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 1em;
+  grid-template-rows: auto 1fr;
+  grid-gap: 3em;
 }

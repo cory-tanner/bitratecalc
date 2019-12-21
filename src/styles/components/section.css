@@ -1,9 +1,11 @@
-.section {
-  &:not(:last-of-type) {
-    margin-bottom: 40px;
-  }
+.section__heading {
+  margin-bottom: .8em;
 }
 
-.section__heading {
-  margin-bottom: .5em;
+.section__copy {
+  @media (max-width: 599px) {
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+  }
 }
