@@ -1,9 +1,0 @@
-.intro {
-  padding: 16px;
-  grid-area: intro;
-  border: 1px solid var(--color-brand-orange);
-}
-
-.intro__heading {
-  margin-bottom: 1em;
-}

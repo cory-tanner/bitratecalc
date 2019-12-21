@@ -1,0 +1,12 @@
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 599px) {
+    padding: 2em 16px;
+  }
+  @media (min-width: 600px) {
+    padding: 2em 16px 3em 16px;
+  }
+}

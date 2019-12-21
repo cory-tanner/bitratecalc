@@ -94,7 +94,7 @@ button {
   display: grid;
   height: 100vh;
   grid-template-areas:
-  "hero"
+  "header"
   "main"
   "footer";
   grid-template-rows: auto 1fr auto;

@@ -4,11 +4,12 @@
 
 .socials__link {
   padding: 8px;
-  fill: var(--color-white);
+  fill: var(--color-brand-green);
 
   &:hover,
   &:focus {
     fill: var(--color-link);
+    outline: none;
   }
 }
 
