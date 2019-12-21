@@ -36,5 +36,5 @@
   "start_url": "/?source=pwa",
   "display": "standalone",
   "theme_color": "hsl(169, 44%, 15%)",
-  "background_color": "hsl(130, 45%, 90%)"
+  "background_color": "#23252a"
 }
