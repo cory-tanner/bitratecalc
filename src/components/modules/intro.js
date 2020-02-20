@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Stateless React Component
 const Intro = () => (
   <section className="section grid">
     <h3 className="t-section-heading grid__item section__heading">Made For Streamers</h3>

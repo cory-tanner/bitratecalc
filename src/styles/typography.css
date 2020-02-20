@@ -51,6 +51,10 @@
   font-size: var(--type-scale-18);
   letter-spacing: .0625rem;
   line-height: 1.6;
+
+  @media (max-width: 599px) {
+    font-size: var(--type-scale-16);
+  }
 }
 
 .t-bitrate {

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+import { numberWithCommas } from '../utility/numberWithCommas';
 
 function bitrateCalcLow(userFPS, userResolutionW, userResolutionH) {
   const PPS = ((userResolutionW * userResolutionH) * userFPS);
@@ -46,7 +43,6 @@ class Calculator extends Component {
   }
 
   render() {
-    //const valueFilled = handleValue(this.state.value);
     return (
       <div className="calculator grid">
         <div className="grid__item" data-grid-medium="6">
@@ -98,7 +94,7 @@ class Calculator extends Component {
             data-has-value={this.state.userResolutionH ? true : false} />
         </div>
 
-        <div className="grid__item" data-grid-medium="8">
+        <div className="grid__item">
           <label className="t-label calculator__label" htmlFor="userFPS">Output Frames Per Second (FPS):</label>
           <input
             name="userFPS"

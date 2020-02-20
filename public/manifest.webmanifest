@@ -1,0 +1,38 @@
+{
+	"short_name" : "BitrateCalc",
+	"name" : "Bitrate Calculator for Streamers",
+	"icons" : [
+		{
+			"src": "https://bitratecalc.com/favicon.ico",
+			"sizes": "64x64 32x32 24x24 16x16"
+		},
+		{
+			"src": "https://bitratecalc.com/favicon-16x16.png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "https://bitratecalc.com/favicon-32x32.png",
+			"sizes": "32x32"
+		},
+		{
+			"src": "https://bitratecalc.com/android-chrome-192x192.png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "https://bitratecalc.com/apple-touch-icon.png",
+			"sizes": "180x180"
+		},
+		{
+			"src": "https://bitratecalc.com/android-chrome-512x512.png",
+			"sizes": "512x512"
+		}],
+	"start_url" : "https://bitratecalc.com",
+	"display" : "standalone",
+	"theme_color" : "hsl(169, 44%, 15%)",
+	"background_color" : "#23252a",
+	"lang" : "English",
+	"screenshots" : [],
+	"description" : "A bitrate calculator made by a streamer for streamers. Get a recommended low and high bitrate setting relative to your network settings",
+	"orientation" : "undefined",
+	"generated" : "undefined"
+}
