@@ -1,6 +1,10 @@
 {
   "short_name": "BitrateCalc",
   "name": "Bitrate Calculator for Streamers",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "theme_color": "hsl(169, 44%, 15%)",
+  "background_color": "#23252a",
   "icons": [
     {
       "src": "favicon.ico",
@@ -32,9 +36,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": "/?source=pwa",
-  "display": "standalone",
-  "theme_color": "hsl(169, 44%, 15%)",
-  "background_color": "#23252a"
+  ]
 }
