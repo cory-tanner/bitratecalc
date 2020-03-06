@@ -16,9 +16,15 @@
 
 .t-display {
   font-family: var(--font-mukta);
-  font-size: var(--type-scale-48);
   font-weight: var(--weight-extra-bold);
   letter-spacing: .0625rem;
+  
+  @media (max-width: 599px) {
+    font-size: var(--type-scale-36);
+  }
+  @media (min-width: 600px) {
+    font-size: var(--type-scale-48);
+  }
 }
 
 .t-section-heading {
