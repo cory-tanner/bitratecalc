@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { numberWithCommas } from '../utility/numberWithCommas';
 
-function bitrateCalcLow(userFPS, userResolutionW, userResolutionH) {
-  const PPS = ((userResolutionW * userResolutionH) * userFPS);
-  const fractionLow = Math.round((.079 * PPS) / 1000);
+const bitrateCalcLow = (userFPS, userResolutionW, userResolutionH) => {
+  let PPS = ((userResolutionW * userResolutionH) * userFPS);
+  let fractionLow = Math.round((.079 * PPS) / 1000);
 
   return(numberWithCommas(fractionLow))
 }
 
-function bitrateCalcHigh(userFPS, userResolutionW, userResolutionH) {
-  const PPS = ((userResolutionW * userResolutionH) * userFPS);
-  const fractionHigh = Math.round((.15 * PPS) / 1000);
+const bitrateCalcHigh = (userFPS, userResolutionW, userResolutionH) => {
+  let PPS = ((userResolutionW * userResolutionH) * userFPS);
+  let fractionHigh = Math.round((.15 * PPS) / 1000);
 
   return(numberWithCommas(fractionHigh))
 }
 
-function bitrateAcceptance(userUpload, userStream) {
-  const recommendBitrate = (userUpload * 1000) * (userStream * .01);
+const bitrateAcceptance = (userUpload, userStream) => {
+  let recommendBitrate = (userUpload * 1000) * (userStream * .01);
 
   return(numberWithCommas(recommendBitrate))
 }
@@ -43,6 +43,8 @@ class Calculator extends Component {
   }
 
   render() {
+    let { userFPS, userResolutionW, userResolutionH, userUpload, userStream } = this.state
+
     return (
       <div className="calculator grid">
         <div className="grid__item" data-grid-medium="6">
@@ -53,8 +55,8 @@ class Calculator extends Component {
             className="t-input calculator__input"
             type="number"
             onChange={this.handleChange}
-            placeholder={this.state.userUpload}
-            data-has-value={this.state.userUpload ? true : false} />
+            placeholder={userUpload}
+            data-has-value={userUpload ? true : false} />
         </div>
 
         <div className="grid__item" data-grid-medium="6">
@@ -65,9 +67,9 @@ class Calculator extends Component {
             className="t-input calculator__input"
             type="number"
             max="100"
-            value={this.state.userStream}
+            value={userStream}
             onChange={this.handleChange}
-            data-has-value={this.state.userStream ? true : false} />
+            data-has-value={userStream ? true : false} />
         </div>
 
         <div className="grid__item" data-grid-medium="6">
@@ -78,8 +80,8 @@ class Calculator extends Component {
             className="t-input calculator__input"
             type="number"
             onChange={this.handleChange}
-            placeholder={this.state.userResolutionW}
-            data-has-value={this.state.userResolutionW ? true : false} />
+            placeholder={userResolutionW}
+            data-has-value={userResolutionW ? true : false} />
         </div>
 
         <div className="grid__item" data-grid-medium="6">
@@ -90,8 +92,8 @@ class Calculator extends Component {
             className="t-input calculator__input"
             type="number"
             onChange={this.handleChange}
-            placeholder={this.state.userResolutionH}
-            data-has-value={this.state.userResolutionH ? true : false} />
+            placeholder={userResolutionH}
+            data-has-value={userResolutionH ? true : false} />
         </div>
 
         <div className="grid__item">
@@ -102,23 +104,23 @@ class Calculator extends Component {
             className="t-input calculator__input"
             type="number"
             onChange={this.handleChange}
-            placeholder={this.state.userFPS}
-            data-has-value={this.state.userFPS ? true : false} />
+            placeholder={userFPS}
+            data-has-value={userFPS ? true : false} />
         </div>
 
         <div className="calculator__result grid__item"  data-grid-medium="6">
           <h4 className="t-body-heading calculator__result__heading">Recommended Bitrate</h4>
           <p id="resultLow" className="t-bitrate calculator__result__output">
-            Low {bitrateCalcLow(this.state.userFPS, this.state.userResolutionW, this.state.userResolutionH)}
+            Low {bitrateCalcLow(userFPS, userResolutionW, userResolutionH)}
           </p>
           <p id="resultHigh" className="t-bitrate calculator__result__output">
-            High {bitrateCalcHigh(this.state.userFPS, this.state.userResolutionW, this.state.userResolutionH)}
+            High {bitrateCalcHigh(userFPS, userResolutionW, userResolutionH)}
           </p>
         </div>
         <div className="calculator__result grid__item" data-grid-medium="6">
           <h4 className="t-body-heading calculator__result__heading">Streams Max Bitrate</h4>
           <p className="t-bitrate calculator__result__output">
-            {bitrateAcceptance(this.state.userUpload, this.state.userStream)}
+            {bitrateAcceptance(userUpload, userStream)}
           </p>
         </div>
       </div>
