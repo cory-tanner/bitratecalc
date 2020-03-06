@@ -19,11 +19,12 @@
 .header__display {
   margin-right: auto;
   margin-left: 16px;
+  color: var(--color-brand-blue-light)
 }
 
 .header__logo {
   height: auto;
-  fill: var(--color-brand-orange);
+  fill: var(--color-brand-blue-light);
 
   @media (max-width: 599px) {
     width: 23px;
