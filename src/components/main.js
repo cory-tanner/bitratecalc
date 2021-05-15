@@ -11,7 +11,20 @@ const Main = () => (
     </section>
     <section className="section section-support">
       <h3 className="section__support-heading t-body-heading">Was this useful?</h3>
-      <p className="section__support-copy t-body">Support the developer by using this <a href="https://brave.com/cor272" className="t-link">Brave Referral Link</a> and give the web browser a test run!</p>
+      <p className="section__support-copy t-body">Support the developer by sending a tip!</p>
+
+      <div className="section__crypto">
+        <div className="section-support__address">
+          <img src="./btc.svg" alt="btc-address" />
+          <p className="t-body section__crypto__heading">BTC</p>
+        </div>
+
+        <div className="section-support__address">
+          <img src="./eth.svg" alt="btc-address" />
+          <p className="t-body section__crypto__heading">ETH</p>
+        </div>
+      </div>
+      
     </section>
   </main>
 )

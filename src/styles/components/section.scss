@@ -14,6 +14,35 @@
   }
 }
 
+.section__support-copy {
+  margin-bottom: .8rem;
+}
+
+.section__crypto {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 600px;
+  justify-content: space-between;
+}
+
 .section__support-heading {
   margin-bottom: 1rem;
+}
+
+.section-support__address {
+  max-width: 300px;
+  
+  img {
+    margin-bottom: .8rem;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 799px) {
+    width: calc(50% - 8px);
+  }
+  @media (min-width: 800px) {
+    width: calc(50% - 12px);
+  }
 }
